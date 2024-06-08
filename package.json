@@ -1,0 +1,18 @@
+{
+  "name": "views",
+  "version": "1.0.0",
+  "description": "Landing page of S.Madathil's lab",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3",
+    "path": "^0.12.7",
+    "url": "^0.11.3"
+  }
+}
