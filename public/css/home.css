@@ -187,14 +187,28 @@ body{
         padding-bottom: 3px;
       }
       a{
-         color: black;
-         transition: color 0.3s ease;
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease, background-color 0.3s ease;
         display: flex;  
         align-items: center;
+        border: #121611 solid 1px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        
          
       }
       a:hover{
-        color: rgb(056, 118, 246);  
+        color: #0c9799;
+        background-color: #0b1419;
+      }
+      .icon{
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+      }
+      a:hover>.icon{
+        filter: grayscale() invert(1) brightness(2); 
       }
       
 }
