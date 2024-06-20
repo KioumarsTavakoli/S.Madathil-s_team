@@ -266,13 +266,15 @@ body{
         position: absolute;
         bottom: 40px;
         right: 45px;
-        color: #0c9799;
+        color: rgb(12, 151, 153);
         font-size: 0.8rem;
         opacity: 0.5;
     }
     
 }
+
 .jelly,.cohs{
+    position: relative;
     display: flex;
     margin-right: 2%;
     align-items: center;
@@ -304,6 +306,7 @@ body{
 
     }
 
+
     img{
         width: 80%;
         transform: translate(0%,0%);
@@ -319,6 +322,26 @@ body{
 
     }
 }
+
+.jelly::before, .cohs::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    z-index: -10; 
+}
+
+.jelly:hover::before, .cohs:hover::before {
+    opacity: 1;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(12, 151, 153, 0.26), rgba(255, 255, 255, 0));
+}
+
+
 @keyframes arrow {
     0%{
         transform: translate(0%,0%);

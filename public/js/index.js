@@ -10,6 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
         slidingText.innerHTML = words[index];
         slidingText.style.color = colors[index];
     }, 2000); // Change every 2 seconds
+    
+    const hoverContainers = document.querySelectorAll('.jelly,.cohs');
+
+    hoverContainers.forEach(hoverContainer => {
+        hoverContainer.addEventListener('mousemove', (e) => {
+            const rect = hoverContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            hoverContainer.style.setProperty('--mouse-x', `${x}px`);
+            hoverContainer.style.setProperty('--mouse-y', `${y}px`);
+            
+        });
+
+    });
 });
 
 $(".imges img").on("click",function(){
@@ -60,3 +75,8 @@ $(".member-detail").on("click", function(e) {
             $customCursor.fadeOut(150);
         });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+       
+    });
+    
